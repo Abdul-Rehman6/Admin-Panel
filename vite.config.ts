@@ -4,6 +4,9 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    'process.env.TAILWIND_MODE': JSON.stringify('build'),
+  },
   plugins: [
     react(),
     svgr({
